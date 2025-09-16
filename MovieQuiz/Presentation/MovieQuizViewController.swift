@@ -7,7 +7,7 @@ final class MovieQuizViewController: UIViewController {
     }
 }
 
-/*
+
  Mock-данные
  
  
@@ -69,4 +69,4 @@ final class MovieQuizViewController: UIViewController {
  Настоящий рейтинг: 5,8
  Вопрос: Рейтинг этого фильма больше чем 6?
  Ответ: НЕТ
-*/
+
