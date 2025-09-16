@@ -33,6 +33,8 @@ final class MovieQuizViewController: UIViewController {
     
     private var correctAnswers = 0
     
+    private var isAnswerProcessed = false
+    
     private let questions: [QuizQuestion] = [
         QuizQuestion(
             image: "The Godfather",
@@ -92,6 +94,7 @@ final class MovieQuizViewController: UIViewController {
       imageView.layer.borderWidth = 0
       imageView.layer.borderColor = nil
         
+      isAnswerProcessed = false
     }
     
     private func show(quiz result: QuizResultViewModel) {
@@ -115,6 +118,10 @@ final class MovieQuizViewController: UIViewController {
     }
 
     private func showAnswerResult(isCorrect: Bool) {
+        if isAnswerProcessed {
+            return
+        }
+        isAnswerProcessed = true
         
         if isCorrect {
             correctAnswers += 1
